@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+
+/* Header rules */
+header {
+    width: 100%;
+    background-color: #1d213c;
+
+    position: fixed;
+    top: 0px;
+    z-index: 10000000000;
+}
+
+header nav{
+    width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+    padding-left: 4%;
+    padding-right: 4%;
+    text-align: right;
+    
+}
+
+header nav a{
+    color: white;
+    text-decoration: none;
+    padding-right: 20px;
+    
+}
+
+#laptopnav_top{
+    height: 50px;
+    padding-top: 15px;
+    border-bottom: 1px solid grey;
+
+    font-size: medium;
+    font-weight: 100;
+}
+
+#laptopnav_bottom{
+    height: 80px;
+    padding-top: 25px;
+    font-size: x-large;
+}
+
+#mobilnav {
+    height:100px;
+    width:100%;
+
+    padding-top: 35px;
+    color:white;
+}
+
+#logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+/* Content rules */
+main {
+    margin-top: 180px;
+}
+h1{
+    margin-left: 4%;
+    margin-right: 4%;
+    color:black;
+    border-bottom: grey solid 1px;
+    font-size:30pt;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+h2{ 
+    hyphens: auto;
+}
+
+h3{
+    font-size: smaller;
+}
+
+#layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+div > section{
+    width: 25%;
+    height:400px;
+    background-color:cadetblue;
+    border-radius:10px;
+    margin:10px;
+    padding: 2%;
+    transition: all 0.5s ease;
+}
+
+div > section:first-child{
+    width:40%;
+    background-color:crimson;
+}
+div > section:nth-child(5){
+    width:40%;
+    background-color:crimson;
+}
+
+section:hover{
+    filter: brightness(1.2);
+}
+
+#pic1{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/udebane-top.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#pic2{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/cecilie-johansen.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+#pic3{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/paddy-jubel-tilskuer.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+#pic4{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/tifo-stemningsafsnit.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+#pic5{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/p1010513.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+#pic6{
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/msc17010194.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+
+/* Footer layout */
+
+footer{
+    margin-top: 50px;
+
+    background-color: #1d213c;
+    color: white;
+}
+
+ul{
+    list-style-type: none;
+    text-align: left;
+    margin: 10%;
+}
+li{
+    width: 350px;
+}
+
+.overskrift{
+    font-weight: 900;
+    width: 200px;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.firekolonner{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+/* responsive */
+/* Mobil layout */
+@media screen and (max-width:1240px) {
+    #logopladsholder{
+        display: none;
+    }
+
+    #mobilnav{
+        display: block;
+    }
+
+    #laptopnav_top, #laptopnav_bottom{
+        display: none;
+    }
+
+    #logo{
+        scale: 0.8;
+    }
+
+
+
+    /* Boks kort */
+    div {
+        flex-direction:column;
+        align-items:center;
+    }
+    div > section{
+        width:90%;
+    }
+    div > section:first-child{
+        width:90%;
+    }
+    div > section:nth-child(5){
+        width:90%;
+    }
+
+    .firekolonner{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        
+    }
+    
+}
+
+
+
+
+
+/* Laptop layout */
+@media screen and (min-width:1240px) {
+    #mobilnav{
+        display: none;
+    }
+
+    #laptopnav_top, #laptopnav_bottom{
+        display: block;
+    }
+}
